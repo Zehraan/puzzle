@@ -177,6 +177,7 @@ class Ui_MainWindow(QMainWindow):
         self.button_karistir = QtWidgets.QPushButton(self.centralwidget)
         self.button_karistir.setGeometry(QtCore.QRect(330, 670, 141, 51))
         self.button_karistir.setObjectName("button_karistir")
+        self.button_karistir.clicked.connect(self.parcalari_karistir)
         self.button_cikis = QtWidgets.QPushButton(self.centralwidget)
         self.button_cikis.setGeometry(QtCore.QRect(1104, 762, 111, 41))
         self.button_cikis.setObjectName("button_cikis")
@@ -267,18 +268,31 @@ class Ui_MainWindow(QMainWindow):
                  self.label_resim.setPixmap(QPixmap.fromImage(resim))
                  self.label_resim.setGeometry(50, 50, new_width, new_height)
 
-                 parcalar = []
+                 self.parcalar = []
+                 self.orijinal_parcalar = []
                  sutun = satir = int(sqrt(self.puzzle.size))
                  width, height = resim.width() // sutun, resim.height() // satir
                  for i in range(sutun):
                      for j in range(satir):
                          parca = resim.copy(j*width, i*height, width, height)
-                         parcalar.append(parca)
+                         self.parcalar.append(parca)
+                         self.orijinal_parcalar.append(parca)
                  
-                 for i, parca in enumerate(parcalar):
+                 for i, parca in enumerate(self.parcalar):
                    buton = getattr(self, f"button_parca{i+1}")
                    buton.setIcon(QIcon(QPixmap.fromImage(parca)))
                    buton.setIconSize(buton.size())
+    
+    def parcalari_karistir(self):
+        while True:
+            shuffle(self.parcalar)
+            if any(self.parcalar[i] == self.orijinal_parcalar[i] for i in range(len(self.parcalar))):
+                break
+
+        for i, parca in enumerate(self.parcalar):
+            buton = getattr(self, f"button_parca{i+1}")
+            buton.setIcon(QIcon(QPixmap.fromImage(parca)))
+            buton.setIconSize(buton.size())
 
     def skor_siralama(self):
         
