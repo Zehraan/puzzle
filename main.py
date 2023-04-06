@@ -257,6 +257,16 @@ class Ui_MainWindow(QMainWindow):
              dosyaAdi, _ = QFileDialog.getOpenFileName(self.centralwidget, "Resim Seç", "", "Resim Dosyaları (*.png *.jpg *.bmp)")
              if dosyaAdi:
                  resim = QImage(dosyaAdi)
+                  # Scale the image to a new width and height
+                 new_width = 601
+                 new_height = 461
+                 resim = resim.scaled(new_width, new_height)
+
+                    # Display the image in a label
+                 self.label_resim = QLabel(self)
+                 self.label_resim.setPixmap(QPixmap.fromImage(resim))
+                 self.label_resim.setGeometry(50, 50, new_width, new_height)
+
                  parcalar = []
                  sutun = satir = int(sqrt(self.puzzle.size))
                  width, height = resim.width() // sutun, resim.height() // satir

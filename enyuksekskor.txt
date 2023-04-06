@@ -30,3 +30,4 @@ s - Hamle Sayýsý: 0 - Puan: 0
 d - Hamle Sayýsý: 0 - Puan: 0
 f - Hamle Sayýsý: 0 - Puan: 0
 s - Hamle Sayýsý: 0 - Puan: 0
+sdf - Hamle Sayýsý: 0 - Puan: 0
