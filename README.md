@@ -15,9 +15,10 @@ KARE PUZZLE OYUNU
 
 -Oyunda her doğru hamle +5 puan, her yanlış hamle ise -10 puan olmalıdır. “enyuksekskor.txt” belgesinde kullanıcı adı, hamle sayısı, ve puanı olmak üzere üç bilgi bulunmalıdır.  
 
+Rapor:
+[puzzle.pdf](https://github.com/Zehraan/puzzle/blob/fbb3109dcdaf1eb44cfdfaa4dffa5a4d5b477f3c/url.pdf)
+
 Uygulamanın ana sayfa resmi:
 ![ana sayfanın ekran görüntüsü](https://github.com/Zehraan/puzzle/blob/4ef85d51ff7445fc0a74594a7963d558e9946ff6/images/ssimage.png)
 
-Rapor:
-[puzzle.pdf](https://github.com/Zehraan/puzzle/blob/fbb3109dcdaf1eb44cfdfaa4dffa5a4d5b477f3c/url.pdf)
 
