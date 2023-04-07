@@ -260,6 +260,7 @@ class Ui_MainWindow(QMainWindow):
         self.button_parca16.setText(_translate("MainWindow", ""))
         self.button_karistir.setText(_translate("MainWindow", "Karıştır"))
         self.button_cikis.setText(_translate("MainWindow", "Çıkış"))
+        self.button_cikis.clicked.connect(self.showDialog)
         self.label_en_yuksek_skor.setText(_translate("MainWindow", "En Yüksek Skorlar"))
 
 
@@ -333,7 +334,11 @@ class Ui_MainWindow(QMainWindow):
             skorlar.sort(reverse=True)
             self.listWidget_skorlar.addItems(skorlar)
         
-
+    def showDialog(self):
+        reply = QMessageBox.question(self, 'Çıkış', 'Çıkmak istediğinize emin misiniz?', QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+        
+        if reply == QMessageBox.Yes:
+            QApplication.quit()
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
