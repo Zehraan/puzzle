@@ -17,6 +17,7 @@ class Ui_MainWindow(QMainWindow):
     def setupUi(self, MainWindow):
 
         self.puzzle=LinkedList()
+        self.selected_button = None
 
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1238, 846)
@@ -43,6 +44,7 @@ class Ui_MainWindow(QMainWindow):
         self.button_parca1.setSizePolicy(sizePolicy)
         self.button_parca1.setMinimumSize(QtCore.QSize(100, 100))
         self.button_parca1.setObjectName("button_parca1")
+        self.button_parca1.clicked.connect(self.buttonClicked)
         self.gridLayout_2.addWidget(self.button_parca1, 0, 0, 1, 1)
         self.button_parca3 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
@@ -51,6 +53,7 @@ class Ui_MainWindow(QMainWindow):
         sizePolicy.setHeightForWidth(self.button_parca3.sizePolicy().hasHeightForWidth())
         self.button_parca3.setSizePolicy(sizePolicy)
         self.button_parca3.setObjectName("button_parca3")
+        self.button_parca3.clicked.connect(self.buttonClicked)
         self.gridLayout_2.addWidget(self.button_parca3, 0, 2, 1, 1)
         self.button_parca2 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
@@ -59,6 +62,7 @@ class Ui_MainWindow(QMainWindow):
         sizePolicy.setHeightForWidth(self.button_parca2.sizePolicy().hasHeightForWidth())
         self.button_parca2.setSizePolicy(sizePolicy)
         self.button_parca2.setObjectName("button_parca2")
+        self.button_parca2.clicked.connect(self.buttonClicked)
         self.gridLayout_2.addWidget(self.button_parca2, 0, 1, 1, 1)
         self.button_parca5 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
@@ -67,6 +71,7 @@ class Ui_MainWindow(QMainWindow):
         sizePolicy.setHeightForWidth(self.button_parca5.sizePolicy().hasHeightForWidth())
         self.button_parca5.setSizePolicy(sizePolicy)
         self.button_parca5.setObjectName("button_parca5")
+        self.button_parca5.clicked.connect(self.buttonClicked)
         self.gridLayout_2.addWidget(self.button_parca5, 1, 0, 1, 1)
         self.button_parca4 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
@@ -75,6 +80,7 @@ class Ui_MainWindow(QMainWindow):
         sizePolicy.setHeightForWidth(self.button_parca4.sizePolicy().hasHeightForWidth())
         self.button_parca4.setSizePolicy(sizePolicy)
         self.button_parca4.setObjectName("button_parca4")
+        self.button_parca4.clicked.connect(self.buttonClicked)
         self.gridLayout_2.addWidget(self.button_parca4, 0, 3, 1, 1)
         self.button_parca9 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
@@ -84,6 +90,7 @@ class Ui_MainWindow(QMainWindow):
         self.button_parca9.setSizePolicy(sizePolicy)
         self.button_parca9.setMinimumSize(QtCore.QSize(100, 100))
         self.button_parca9.setObjectName("button_parca9")
+        self.button_parca9.clicked.connect(self.buttonClicked)
         self.gridLayout_2.addWidget(self.button_parca9, 2, 0, 1, 1)
         self.button_parca13 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
@@ -92,6 +99,7 @@ class Ui_MainWindow(QMainWindow):
         sizePolicy.setHeightForWidth(self.button_parca13.sizePolicy().hasHeightForWidth())
         self.button_parca13.setSizePolicy(sizePolicy)
         self.button_parca13.setObjectName("button_parca13")
+        self.button_parca13.clicked.connect(self.buttonClicked)
         self.gridLayout_2.addWidget(self.button_parca13, 3, 0, 1, 1)
         self.button_parca6 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
@@ -100,6 +108,7 @@ class Ui_MainWindow(QMainWindow):
         sizePolicy.setHeightForWidth(self.button_parca6.sizePolicy().hasHeightForWidth())
         self.button_parca6.setSizePolicy(sizePolicy)
         self.button_parca6.setObjectName("button_parca6")
+        self.button_parca6.clicked.connect(self.buttonClicked)
         self.gridLayout_2.addWidget(self.button_parca6, 1, 1, 1, 1)
         self.button_parca7 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
@@ -108,6 +117,7 @@ class Ui_MainWindow(QMainWindow):
         sizePolicy.setHeightForWidth(self.button_parca7.sizePolicy().hasHeightForWidth())
         self.button_parca7.setSizePolicy(sizePolicy)
         self.button_parca7.setObjectName("button_parca7")
+        self.button_parca7.clicked.connect(self.buttonClicked)
         self.gridLayout_2.addWidget(self.button_parca7, 1, 2, 1, 1)
         self.button_parca8 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
@@ -117,6 +127,7 @@ class Ui_MainWindow(QMainWindow):
         self.button_parca8.setSizePolicy(sizePolicy)
         self.button_parca8.setMinimumSize(QtCore.QSize(100, 100))
         self.button_parca8.setObjectName("button_parca8")
+        self.button_parca8.clicked.connect(self.buttonClicked)
         self.gridLayout_2.addWidget(self.button_parca8, 1, 3, 1, 1)
         self.button_parca10 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
@@ -125,6 +136,7 @@ class Ui_MainWindow(QMainWindow):
         sizePolicy.setHeightForWidth(self.button_parca10.sizePolicy().hasHeightForWidth())
         self.button_parca10.setSizePolicy(sizePolicy)
         self.button_parca10.setObjectName("button_parca10")
+        self.button_parca10.clicked.connect(self.buttonClicked)
         self.gridLayout_2.addWidget(self.button_parca10, 2, 1, 1, 1)
         self.button_parca11 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
@@ -133,6 +145,7 @@ class Ui_MainWindow(QMainWindow):
         sizePolicy.setHeightForWidth(self.button_parca11.sizePolicy().hasHeightForWidth())
         self.button_parca11.setSizePolicy(sizePolicy)
         self.button_parca11.setObjectName("button_parca11")
+        self.button_parca11.clicked.connect(self.buttonClicked)
         self.gridLayout_2.addWidget(self.button_parca11, 2, 2, 1, 1)
         self.button_parca12 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
@@ -141,6 +154,7 @@ class Ui_MainWindow(QMainWindow):
         sizePolicy.setHeightForWidth(self.button_parca12.sizePolicy().hasHeightForWidth())
         self.button_parca12.setSizePolicy(sizePolicy)
         self.button_parca12.setObjectName("button_parca12")
+        self.button_parca12.clicked.connect(self.buttonClicked)
         self.gridLayout_2.addWidget(self.button_parca12, 2, 3, 1, 1)
         self.button_parca14 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
@@ -149,6 +163,7 @@ class Ui_MainWindow(QMainWindow):
         sizePolicy.setHeightForWidth(self.button_parca14.sizePolicy().hasHeightForWidth())
         self.button_parca14.setSizePolicy(sizePolicy)
         self.button_parca14.setObjectName("button_parca14")
+        self.button_parca14.clicked.connect(self.buttonClicked)
         self.gridLayout_2.addWidget(self.button_parca14, 3, 1, 1, 1)
         self.button_parca15 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
@@ -157,6 +172,7 @@ class Ui_MainWindow(QMainWindow):
         sizePolicy.setHeightForWidth(self.button_parca15.sizePolicy().hasHeightForWidth())
         self.button_parca15.setSizePolicy(sizePolicy)
         self.button_parca15.setObjectName("button_parca15")
+        self.button_parca15.clicked.connect(self.buttonClicked)
         self.gridLayout_2.addWidget(self.button_parca15, 3, 2, 1, 1)
         self.button_parca16 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
@@ -166,6 +182,7 @@ class Ui_MainWindow(QMainWindow):
         self.button_parca16.setSizePolicy(sizePolicy)
         self.button_parca16.setMinimumSize(QtCore.QSize(100, 100))
         self.button_parca16.setObjectName("button_parca16")
+        self.button_parca16.clicked.connect(self.buttonClicked)
         self.gridLayout_2.addWidget(self.button_parca16, 3, 3, 1, 1)
         self.lcdNumber_skor = QtWidgets.QLCDNumber(self.centralwidget)
         self.lcdNumber_skor.setGeometry(QtCore.QRect(1100, 20, 111, 51))
@@ -293,6 +310,20 @@ class Ui_MainWindow(QMainWindow):
             buton = getattr(self, f"button_parca{i+1}")
             buton.setIcon(QIcon(QPixmap.fromImage(parca)))
             buton.setIconSize(buton.size())
+            
+    def buttonClicked(self):
+        clicked_button = self.sender()
+
+        if self.selected_button is None:
+            # İlk tıklanan buton seçildi
+            self.selected_button = clicked_button
+        else:
+            # İkinci tıklanan buton seçildi, yer değiştir
+            pos1 = self.selected_button.pos()
+            pos2 = clicked_button.pos()
+            self.selected_button.move(pos2)
+            clicked_button.move(pos1)
+            self.selected_button = None
 
     def skor_siralama(self):
         
